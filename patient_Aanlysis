@@ -1,0 +1,10 @@
+import pandas as pd
+file_list = ['PAH_2016.csv', 'PAH_2017.csv', 'PAH_2018.csv', 'PAH_2019.csv', 'PAH_2020.csv', 'PAH_2021.csv', 'PAH_2022.csv']
+print(file_list)
+print(os.listdir())
+#list all csv files only
+csv_files = glob.glob('*.{}'.format('csv'))
+csv_files
+for k in csv_files:
+    df = pd.read_csv(k, encoding='ISO 8859-1')
+    
